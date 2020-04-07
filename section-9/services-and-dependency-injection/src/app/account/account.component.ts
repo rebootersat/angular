@@ -20,6 +20,6 @@ export class AccountComponent implements OnInit {
 
   onSetTo(status:string){
     this.accountService.updateInfo(this.id, status)
-    this.service.logToConsole(status);
+  //  this.service.logToConsole(status);
   }
 }
