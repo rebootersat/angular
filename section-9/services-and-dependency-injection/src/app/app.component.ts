@@ -1,30 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AccountsService } from './services/accounts.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers: [AccountsService]
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'services-and-dependency-injection';
+  accounts = [];
 
-  accounts = [
-    {
-      name: 'Master Account',
-      status: 'Active'
-    },
-    {
-      name: 'Test Account',
-      status: 'Inactive'
-    }
-  ];
-
-  onAccountAdded(account: { name: string, status: string }) {
-    this.accounts.push(account);
+  constructor(private accountService : AccountsService){
   }
 
-  onStatusChanged(updateInfo: { id: number, newStatus: string }) {
-    this.accounts[updateInfo.id].status = updateInfo.newStatus;
+  ngOnInit(){
+    this.accounts = this.accountService.accounts;
   }
 
 }
