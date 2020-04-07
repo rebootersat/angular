@@ -1,1 +1,36 @@
-<p>recipe-detail works!</p>
+
+<div class="row">
+    <div class="col-xs-12">
+        <img [src]="recipeDetail.imagePath" alt="{{recipeDetail.name}}" srcset="" class="img-responsive">
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <h1>{{recipeDetail.name}}</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <div class="btn-group" appDropdown>
+            <button type="button"
+            class="btn btn-primary dropdown-toggle" >
+        Manage Recipe <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a href="#">Add ingredients to recipe</a></li>
+            <li><a href="#">Edit recipe</a></li>
+            <li><a href="#">Delete</a></li>
+        </ul>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <h5>{{recipeDetail.description}}</h5>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <h5>Ingredients</h5>
+    </div>
+</div>

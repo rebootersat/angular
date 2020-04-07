@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'course-project-the-basics';
+
+  activeFeatureName : string = 'recipes';
+
+  onNavigate(event : {eventName: string}){
+    this.activeFeatureName = event.eventName;
+  }
+
 }

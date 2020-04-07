@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShoppingListComponent implements OnInit {
 
+  ingredients = [{ name: 'Apple', amount: 5 },
+  { name: 'Orange', amount: 3 }
+  ];
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onIngredientAdded(ingredient: { name: string, amount: number }) {
+    this.ingredients.push(ingredient);
   }
 
 }

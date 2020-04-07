@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-primary" (click)="showEven = !showEven">Show Even Numbers</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <ul class="list-group">
+        <div *ngIf="showEven">
+          <div class="row">
+            <div class="col-xs-12">
+              Even Numbers
+            </div>
+          </div>
+          <li class="list-group-item" *ngFor="let even of evenNumbers"
+          [appHighlightYelloDirective]="'pink'" [defaultColor]="'blue'" >
+            {{even}}
+          </li>
+        </div>
+        <div *ngIf="!showEven">
+          <div class="row">
+            <div class="col-xs-12">
+              Odd Numbers
+            </div>
+          </div>
+          <li class="list-group-item" *ngFor="let odd of oddNumbers" 
+          [ngClass] = "{odd : odd %2 !=0}"
+          [ngStyle] = "{backgroundColor: 'green'}">
+            {{odd}}
+          </li>
+        </div>
+      </ul>
+      <p [appHighlightYelloDirective]="'red'" [defaultColor]="'green'" >Highlight in yellow</p>
+
+      <div [ngSwitch]="val">
+        <p *ngSwitchCase="5">Value is 5</p>
+        <p *ngSwitchCase="10">Value is 10</p>
+        <p *ngSwitchCase="15">Value is 15</p>
+        <p *ngSwitchCase="20">Value is 20</p>
+        <p *ngSwitchDefault>Default case executed</p>
+      </div>
+
+
+    </div>
+  </div>
+</div>
