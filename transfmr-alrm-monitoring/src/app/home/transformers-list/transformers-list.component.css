@@ -1,0 +1,114 @@
+.panel-search{
+    background: #EBF0F5 0% 0% no-repeat padding-box;
+border: 0.75px solid #DFE6ED;
+opacity: 1;
+}
+
+
+.panel-search-left{
+    text-align: left;
+    font: Regular 14px/20px Arial;
+    letter-spacing: 0px;
+    color: #ADBECB;
+    opacity: 1;
+}
+
+.search-box{
+    width: 208px;
+height: 30px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+
+.all-results{
+    text-align: left;
+font: Bold 14px/17px Siemens Sans;
+letter-spacing: 0px;
+color: #3296B9;
+opacity: 1;
+}
+
+.showing-result{
+    text-align: left;
+font: Roman 14px/39px Siemens Sans;
+letter-spacing: 0px;
+color: #2D373C;
+opacity: 1;
+}
+
+.table{
+    border: 1px solid #DFE6ED;
+opacity: 1;
+}
+
+.table-footer{
+    width: 100%;
+opacity: 1;
+}
+
+.label-text{
+    text-align: left;
+font: Roman 13px/16px Siemens Sans;
+letter-spacing: 0px;
+color: #697882;
+opacity: 1;
+}
+
+.no-entries{
+    width: 53px;
+height: 30px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 1px solid #DFE6ED;
+opacity: 1;
+}
+
+.trns-head{
+    text-align: left;
+font: Bold 28px/20px Siemens Sans;
+letter-spacing: 0px;
+color: #2D373C;
+opacity: 1;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+
+
+.trns-table-head{
+    text-align: left;
+font: Bold 14px/17px Siemens Sans;
+letter-spacing: 0px;
+color: #2D373C;
+opacity: 1;
+}
+
+trns-table-row
+{
+    text-align: left;
+font: Roman 13px/45px Siemens Sans;
+letter-spacing: 0px;
+opacity: 1;
+}
+
+.trns-filter-by{
+    text-align: left;
+font: Bold 14px/34px Siemens Sans;
+letter-spacing: 0px;
+color: #2D373C;
+opacity: 1;
+}
+
+.img{
+    width: 16px;
+height: 10px;
+transform: matrix(-1, 0, 0, -1, 0, 0);
+}
+
+.custom {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.dropdown-menu {         
+  max-height: 200px;
+  overflow-y: auto;
+}

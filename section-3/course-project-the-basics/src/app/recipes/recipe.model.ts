@@ -1,13 +1,16 @@
+import { Ingredient } from '../shopping-list/Ingredient.model';
 
 export class Recipe {
     public name: string;
     public description: string;
     public imagePath: string;
+    public ingredients: Ingredient[];
 
-    public constructor(name: string, desc: string, imgPath: string) {
+    public constructor(name: string, desc: string, imgPath: string,ingredients: Ingredient[]) {
         this.name = name;
         this.description = desc;
         this.imagePath = imgPath;
+        this.ingredients = ingredients;
     }
 
 }

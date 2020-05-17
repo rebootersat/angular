@@ -1,0 +1,23 @@
+
+.home-option{
+    text-align: left;
+font: Bold 12px/20px Siemens Sans;
+letter-spacing: 0px;
+color: #2387AA;
+opacity: 1;
+}
+
+.trns-details{
+    text-align: left;
+    margin-left: 5px;
+font: Roman 12px/20px Siemens Sans;
+letter-spacing: 0px;
+color: #2D373C;
+opacity: 1;
+}
+
+.search-box{
+	background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 0px 8px 8px #00000059;
+opacity: 1;
+}

@@ -1,0 +1,33 @@
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="power-summary-head">Delhi Power Summary</div>
+        </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+         
+          <table class="table power-summary-table">
+            <thead class="power-summary-table-header" style="background-color: #DFE6ED;">
+              <tr>
+                <th scope="col">Schedule</th>
+                <th scope="col">Drawl</th>
+                <th scope="col">Frequency</th>
+                <th scope="col">UI Rate</th>
+                <th scope="col">OD/UD</th>
+              </tr>
+            </thead>
+            
+            <tbody power-summary-table-body *ngIf="powerSummary">
+              <tr>
+                <td>3394</td>
+                <td>2834</td>
+                <td>50.1</td>
+                <td>0</td>
+                <td>-1</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>

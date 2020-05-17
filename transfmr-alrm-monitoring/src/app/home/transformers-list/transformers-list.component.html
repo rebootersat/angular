@@ -1,0 +1,115 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="trns-head">Transformers<img style="margin-left: 5px;" src="../../assets/img/arrow-up-small.png"
+                alt=""></div>
+
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading panel-search " style="background-color: #DFE6ED;">
+        <div class="row" style="padding: 0px 15px 0px 0px;">
+            <div class="panel-search-left col-lg-6 col-md-6 col-sm-6 col-xs-6">Search for...</div>
+            <div class="input-group search-box col-lg-6 col-md-6 col-sm-6 col-xs-6" style="float: right;">
+                <input type="text" class="form-control" placeholder="Search for...">
+                <span class="input-group-btn">
+                    <button class="btn btn-default glyphicon glyphicon-search" type="button"></button>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="panel-body">
+        <div class="pull-left">
+
+            <div class="all-results">All Results</div>
+
+
+            <div class="showing-result">Showing {{from}}-{{to}} of {{totalRecords}} results</div>
+
+        </div>
+        <div class="pull-right trns-filter-by">
+            Filter By <img style="margin-left: 3px;" src="../../assets/img/arrow-up-small.png" alt="">
+        </div>
+    </div>
+
+    <!-- Table -->
+    <table class="table">
+        <thead style="background-color: #DFE6ED;">
+            <tr class="trns-table-head">
+                <th scope="col">Grid/Transformer/Capacity(MVA)</th>
+                <th style="text-align: right;" scope="col">MW</th>
+                <th style="text-align: right;" scope="col">MVAR</th>
+                <th style="text-align: right;" scope="col">Voltage 220 KV</th>
+                <th style="text-align: right;" scope="col">Voltage 66 KV</th>
+            </tr>
+        </thead>
+        <tbody *ngIf="transfmrs">
+
+            <tr *ngFor="let transformer of transfmrs | slice:startIndex:endIndex" class="trns-table-row"
+                style="font: Roman 13px/45px Siemens Sans;">
+                <td><a style="colo:#2387AA;F58C14;font: Roman 13px/45px Siemens Sans;"
+                        href="#">{{transformer.tranformerName}}</a></td>
+                <td style="text-align: right;font: Roman 13px/45px Siemens Sans;">{{transformer.realTimeMW}}</td>
+                <td style="text-align: right;font: Roman 13px/45px Siemens Sans;">{{transformer.realTimeMVar}}</td>
+                <td style="text-align: right;font: Roman 13px/45px Siemens Sans;">{{transformer.realTimeVoltage220KV}}
+                </td>
+                <td style="text-align: right;font: Roman 13px/45px Siemens Sans;">{{transformer.realTimeVoltage66KV}}
+                </td>
+            </tr>
+
+
+
+        </tbody>
+
+    </table>
+
+
+
+    <div class="panel-footer" style="background-color: white;">
+
+        <table class="table-footer">
+
+            <tbody>
+
+                <tr>
+                    <td style="text-align: left;">
+                        Show
+                        <input style="width: 53px;height: 30px;" type="number" [(ngModel)]="enteries" (change)="onChangeShowLimit()">
+                        entries
+                    </td>
+
+
+                    <td class="text-right row">
+
+                        <div class="btn-group" role="group">
+                            <div class="col-xs-6 custom">
+                                <input class="btn btn-primary btn-sm" type="button" value="Previous" (click) = "onPrevious()">
+                            </div>
+
+
+                            <div class="col-xs-3 custom">
+							
+										
+                                <div class="dropup">
+                                    <button class="btn btn-default dropdown-toggle btn-sm" type="button" data-toggle="dropdown">{{selected}}
+                                    <span class="caret"></span></button>
+                                    <ul class="dropdown-menu">
+									  <li *ngFor="let pageNo of totalPages"><a (click)="onSelected($event.target.innerText)" href="#">{{pageNo}}</a></li>
+                                    </ul>
+                                  </div>
+                            </div>
+
+                            <div class="col-xs-2 custom">
+                                <input class="btn btn-primary btn-sm" type="button" value="Next" (click) = "onNext()">
+                            </div>
+                        </div>
+                    </td>
+
+                </tr>
+            </tbody>
+
+        </table>
+
+    </div>
+</div>
